@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import commandData from "../data/commandData";
 
 export default function CommandList({ setCommandInput }) {
-  const [openFolders, setOpenFolders] = useState({}); // tracks which folders are open
+  const [openFolders, setOpenFolders] = useState({}); 
 
   const toggleFolder = (index) => {
     setOpenFolders((prev) => ({
@@ -13,6 +13,7 @@ export default function CommandList({ setCommandInput }) {
 
   return (
     <ul className="command-list">
+      <h2 className="h2-margin">Команди</h2>
       {commandData.map((folder, index) => (
         <li key={folder.name}>
           <div
